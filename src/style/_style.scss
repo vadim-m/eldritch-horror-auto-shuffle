@@ -1,0 +1,177 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Uncial Antiqua", cursive;
+  font-size: 1rem;
+  color: #000;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  text-align: center;
+
+  margin: 1rem 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background: url("./assets/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 96%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 20px;
+  align-items: center;
+
+  margin: 0 auto;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.title {
+  grid-column: span 8;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.ancients {
+  grid-column: span 8;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 0;
+  margin: 0;
+}
+
+.ancient {
+  max-width: 24%;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.15s ease-in;
+
+  cursor: pointer;
+}
+
+.ancient.active {
+  border: 2px solid sandybrown;
+}
+
+.ancient:hover {
+  opacity: 0.85;
+}
+
+.game-stages {
+  font-size: 2rem;
+  grid-column: span 2;
+  background-color: #d4c1b6;
+  background-image: url("https://www.transparenttextures.com/patterns/nice-snow.png");
+  border-radius: 15px;
+
+  padding: 25px;
+}
+
+.game-stage {
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-stage:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.game-card {
+  width: 65px;
+  color: whitesmoke;
+  font-weight: bold;
+  text-align: center;
+  border: 3px solid whitesmoke;
+  border-radius: 4px;
+}
+
+.game-card--green {
+  background-color: #2c4914;
+}
+
+.game-card--blue {
+  background-color: #3c4390;
+}
+
+.game-card--brown {
+  background-color: #ad8b33;
+}
+
+.shuffle-btn {
+  font-size: 1.5rem;
+  height: 75px;
+  grid-column: span 2;
+  background: url("./assets/btn-bg.png");
+  background-size: cover;
+  background-position: center;
+  border: none;
+
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.shuffle-btn:hover {
+  font-size: 1.8rem;
+}
+
+.cards {
+  grid-column: span 4;
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  width: 50%;
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card-backside {
+  filter: grayscale(60%);
+  cursor: pointer;
+}
+
+.card-backside:hover {
+  filter: grayscale(40%);
+}
