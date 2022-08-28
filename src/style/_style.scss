@@ -80,20 +80,22 @@ h1 {
 }
 
 .ancient {
-  max-width: 24%;
+  width: 24%;
+  display: flex;
   border-radius: 15px;
   overflow: hidden;
+  opacity: 0.55;
   transition: all 0.15s ease-in;
 
   cursor: pointer;
 }
 
 .ancient.active {
-  border: 2px solid sandybrown;
+  opacity: 1;
 }
 
 .ancient:hover {
-  opacity: 0.85;
+  opacity: 1;
 }
 
 .ancient__photo {
@@ -155,7 +157,7 @@ h1 {
 }
 
 .shuffle-btn:hover {
-  font-size: 1.8rem;
+  // font-size: 1.8rem;
 }
 
 .cards {
@@ -166,9 +168,13 @@ h1 {
 
 .card {
   width: 50%;
-  display: flex;
+  height: 370px;
   border-radius: 15px;
   overflow: hidden;
+}
+
+.card img {
+  width: 100%;
 }
 
 .card-backside {
