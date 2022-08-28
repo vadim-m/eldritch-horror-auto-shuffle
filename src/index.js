@@ -185,27 +185,23 @@ const imgWrap = document.querySelector(".card-result");
 const img = new Image();
 imgWrap.append(img);
 let counter = 0;
+let deck;
 
-const startShuffleCards = (deck) => {
-  cardBtn.addEventListener("click", (e) => {
-    if (counter < deck.length) {
-      img.src = deck[counter].cardFace;
-      counter++;
-      console.log("click");
-    }
-  });
-};
+cardBtn.addEventListener("click", (e) => {
+  if (counter < deck.length) {
+    img.src = deck[counter].cardFace;
+    counter++;
+  }
+});
 
 const startPreparing = (selectedHero) => {
   for (let ancient of ancientsData) {
     if (ancient.id === selectedHero) {
       let stagesArr = fillAllStages(ancient);
       fillScheme(stagesArr);
-      const deck = fillDeck(stagesArr);
-      console.log(deck);
+      deck = fillDeck(stagesArr);
       counter = 0;
-
-      startShuffleCards(deck);
+      shuffleBtn.disabled = false;
     }
   }
 };
