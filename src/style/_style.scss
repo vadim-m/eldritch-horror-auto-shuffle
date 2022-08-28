@@ -96,6 +96,10 @@ h1 {
   opacity: 0.85;
 }
 
+.ancient__photo {
+  pointer-events: none;
+}
+
 .game-stages {
   font-size: 2rem;
   grid-column: span 2;
